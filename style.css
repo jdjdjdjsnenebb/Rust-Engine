@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #ce422b; /* Цвет Rust */
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --text-white: #ffffff;
+    --text-gray: #aaaaaa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('assets/background.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--primary-color);
+}
+
+p.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+.download-btn {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(206, 66, 43, 0.5);
+}
+
+.features {
+    padding: 100px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: border-color 0.3s;
+}
+
+.feature-card:hover {
+    border-color: var(--primary-color);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #0a0a0a;
+    color: var(--text-gray);
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    p.subtitle { font-size: 1.1rem; }
+    .download-btn { padding: 15px 30px; font-size: 1.2rem; }
+}
